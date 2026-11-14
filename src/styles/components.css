@@ -5,6 +5,7 @@
   .btn.primary { background: var(--ink); color: var(--bg); }
   .btn.small { padding: 8px 14px; font-size: .88rem; }
   .tool { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px; font: 600 .84rem var(--body); cursor: pointer; }
+  .theme-btn { padding: 6px 9px; min-width: 36px; justify-content: center; }
   .tool:disabled { opacity: .5; cursor: default; }
   .switch .knob { width: 30px; height: 18px; border-radius: 999px; background: var(--line); position: relative; }
   .switch .knob::after { content: ""; position: absolute; left: 2px; top: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.3); }
@@ -17,13 +18,14 @@
   .idcard { cursor: pointer; perspective: 1200px; color: var(--ink); }
   .idcard-inner { transform-style: preserve-3d; }
   .idcard.flipped .idcard-inner { transform: rotateY(180deg); }
-  .id-face { background: var(--surface); border: 1.5px solid var(--ink); border-radius: 22px; box-shadow: 8px 8px 0 var(--ink); backface-visibility: hidden; -webkit-backface-visibility: hidden; position: relative; }
+  .id-face { background: var(--surface); border: 1.5px solid var(--edge); border-radius: 22px; box-shadow: 8px 8px 0 var(--hard-shadow); backface-visibility: hidden; -webkit-backface-visibility: hidden; position: relative; }
+  .id-front { transform: rotateY(0deg); } /* Safari needs a transform on both faces to hide the back */
   .id-back { display: grid; transform: rotateY(180deg); background: var(--accent-soft); }
-  .id-clip { position: absolute; top: -14px; left: 50%; width: 46px; height: 22px; margin-left: -23px; border-radius: 6px; background: var(--bg); border: 1.5px solid var(--ink); }
+  .id-clip { position: absolute; top: -14px; left: 50%; width: 46px; height: 22px; margin-left: -23px; border-radius: 6px; background: var(--bg); border: 1.5px solid var(--edge); }
   .id-clip::after { content: ""; position: absolute; left: 50%; top: 7px; width: 22px; height: 5px; margin-left: -11px; border-radius: 3px; background: var(--line); }
   .id-status { display: inline-flex; align-items: center; gap: 6px; background: var(--good-soft); padding: 4px 9px; border-radius: 999px; }
   .id-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--good); }
-  .id-avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(from 210deg, var(--accent), #0F766E, #F4B740, var(--accent)); border: 3px solid var(--surface); box-shadow: 0 0 0 1.5px var(--ink); }
+  .id-avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(from 210deg, var(--accent), #0F766E, #F4B740, var(--accent)); border: 3px solid var(--surface); box-shadow: 0 0 0 1.5px var(--edge); }
   .id-fact { border: 1px solid var(--line); border-radius: 10px; padding: 7px 9px; background: var(--bg); }
   .id-why span::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--good); font-weight: 800; }
   .id-flip { border-top: 1px dashed var(--line); padding-top: 10px; }
@@ -85,6 +87,6 @@
   .cs-facts > div { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--surface); }
   .nda-note { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 12px 14px; border-radius: 0 10px 10px 0; font-size: .95rem; }
   .decision { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 6px; }
-  .flow li { border: 1.5px solid var(--ink); border-radius: 10px; padding: 10px 14px; background: var(--surface); }
+  .flow li { border: 1.5px solid var(--edge); border-radius: 10px; padding: 10px 14px; background: var(--surface); }
   .flow li:not(:last-child)::after { content: "→"; position: absolute; right: -24px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 700; }
 }

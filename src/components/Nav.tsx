@@ -1,5 +1,6 @@
 import { profile } from '../content/profile';
 import { useUi, Xr } from './Ui';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Nav({ onToggleXray, replaying }: { onToggleXray: () => void; replaying: boolean }) {
   const { xray, goTo, startReplay } = useUi();
@@ -18,6 +19,7 @@ export function Nav({ onToggleXray, replaying }: { onToggleXray: () => void; rep
           {link('contact', 'Contact')}
         </ul>
         <div className="tools" data-xr-ignore>
+          <ThemeToggle />
           <button className="tool" onClick={startReplay} disabled={replaying}>
             <span aria-hidden="true">▶</span> <span className="long">Watch it get built</span><span className="short">Build</span>
           </button>

@@ -5,27 +5,45 @@
   --xr: #0B8F86; --xr-ink: #06615B; --xr-soft: rgba(11, 143, 134, .07);
   --good: #1D8A4E; --good-soft: #E3F4EA; --warn: #A86500; --warn-soft: #FBF0DC;
   --band: #16161A; --band-ink: #F2F1EC; --band-muted: #B4B3BB; --band-accent: #9CB0FF;
+  --edge: #16161A; --hard-shadow: #16161A; --soft-shadow: rgba(0, 0, 0, .35);
   --code-bg: #121518; --code-ink: #D5DDE2;
   --display: "Archivo", "Segoe UI", system-ui, sans-serif;
   --body: "Inter Tight", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
   color-scheme: light;
 }
+/* Dark: follows the phone/computer setting, unless the visitor picked a theme with the switch. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #111113; --surface: #1A1A1E; --ink: #ECEBE6; --muted: #A3A2AB; --line: #2D2D33;
     --accent: #8CA3FF; --accent-soft: #212947;
     --xr: #38D5C8; --xr-ink: #7BE8DE; --xr-soft: rgba(56, 213, 200, .06);
     --good: #4CCB85; --good-soft: #16301F; --warn: #F2B45A; --warn-soft: #33270F;
     --band: #1E2340; --band-ink: #ECEBE6; --band-muted: #A9AEC9; --band-accent: #9CB0FF;
+    --edge: #4A4A55; --hard-shadow: #000000; --soft-shadow: rgba(0, 0, 0, .55);
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+    --bg: #111113; --surface: #1A1A1E; --ink: #ECEBE6; --muted: #A3A2AB; --line: #2D2D33;
+    --accent: #8CA3FF; --accent-soft: #212947;
+    --xr: #38D5C8; --xr-ink: #7BE8DE; --xr-soft: rgba(56, 213, 200, .06);
+    --good: #4CCB85; --good-soft: #16301F; --warn: #F2B45A; --warn-soft: #33270F;
+    --band: #1E2340; --band-ink: #ECEBE6; --band-muted: #A9AEC9; --band-accent: #9CB0FF;
+    --edge: #4A4A55; --hard-shadow: #000000; --soft-shadow: rgba(0, 0, 0, .55);
+    color-scheme: dark;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-padding-top: 16px; }
 body { margin: 0; background: var(--bg); color: var(--ink); -webkit-text-size-adjust: 100%; }
 img { max-width: 100%; }
 main:focus { outline: none; }
+/* Keyboard focus is always visible (not tied to any replay layer). */
+:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+/* Smooth colour change when switching light/dark with the theme button. */
+html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease !important;
+}
 .skip { position: absolute; left: -999px; top: 8px; }
 .skip:focus { left: 8px; z-index: 50; background: var(--ink); color: var(--bg); padding: 8px 12px; border-radius: 8px; }
 
