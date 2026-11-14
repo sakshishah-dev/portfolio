@@ -90,6 +90,8 @@
   .cs { display: grid; gap: 18px; }
   .cs-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 6px 0; }
   .cs-facts dd { margin: 4px 0 0; }
+  .cs-video { margin: 10px 0 6px; display: grid; justify-items: center; gap: 10px; }
+  .cs-video video { display: block; width: min(300px, 100%); height: auto; aspect-ratio: 390 / 664; }
   .cs-sec { display: grid; gap: 12px; margin-top: 20px; }
   .cs-sec h2 { margin: 0; }
   .cs-list { margin: 0; padding-left: 20px; display: grid; gap: 6px; }

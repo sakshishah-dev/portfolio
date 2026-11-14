@@ -79,4 +79,5 @@
   .flow b { font-family: var(--mono); font-weight: 500; font-size: .9rem; }
   .flow span { font-size: .8rem; color: var(--muted); }
   .flow-cap { font-size: .9rem; }
+  .cs-video figcaption { font-size: .88rem; color: var(--muted); text-align: center; max-width: 46ch; }
 }

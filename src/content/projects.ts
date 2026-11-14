@@ -17,6 +17,7 @@ export type Project = {
   facts?: [string, string][];
   links?: { label: string; href: string; note?: string }[];
   note?: string;
+  video?: { src: string; poster: string; caption: string };
   sections?: Section[];
 };
 
@@ -36,6 +37,7 @@ export const projects: Project[] = [
       ['Works on', 'Android, iPhone and desktop'],
       ['Languages', 'English · हिन्दी · ગુજરાતી'],
     ],
+    video: { src: 'media/daily-assistant-demo.mp4', poster: 'media/daily-assistant-poster.jpg', caption: 'Recorded from the demo: ticking a medicine, adding water, checking on Maa, progress and reminders.' },
     links: [{ label: 'Try the live demo', href: 'https://daily-assistant-eta.vercel.app', note: 'Tap "Try the demo": no sign-up, sample data, nothing is saved or sent' }],
     sections: [
       {
@@ -79,6 +81,16 @@ export const projects: Project[] = [
           ['Your phone', 'shows it, even if closed'],
         ],
         caption: 'The database wakes the API every minute; the API claims each reminder once, then sends it to all of your devices.',
+      },
+      {
+        kind: 'list',
+        heading: "What I'd do differently",
+        items: [
+          'Plan for languages from day one. Adding Hindi and Gujarati later meant going back through every screen.',
+          'Run end-to-end tests on every push. The scheduler has unit tests, but screen tests came late and ran by hand.',
+          "Share the 'what is due today' rules between the app and the server. Today they live in two places that must stay in sync.",
+          'Design the data for families from the start. Sharing came later, so I had to add extra checks to keep shared medicines separate.',
+        ],
       },
       {
         kind: 'text',
@@ -131,6 +143,15 @@ export const projects: Project[] = [
           ['SQL Server', 'data'],
         ],
         caption: 'A generic picture of the stack, with no client-specific details.',
+      },
+      {
+        kind: 'list',
+        heading: "What I'd do differently",
+        items: [
+          'Write automated tests alongside each feature, so every release needs less manual checking.',
+          'Ship big modules like Tasks in smaller pieces, to get the client\'s feedback sooner.',
+          'Keep short notes on each technical decision. As the only developer, this makes handing over much easier.',
+        ],
       },
     ],
   },
