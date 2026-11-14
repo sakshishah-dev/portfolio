@@ -12,6 +12,7 @@ export function Nav({ onToggleXray, replaying }: { onToggleXray: () => void; rep
       <div className="wrap site-nav">
         <a className="logo" href="#/" onClick={(e) => { e.preventDefault(); goTo('top'); }}>{profile.name}</a>
         <ul className="nav-links">
+          {link('match', 'Job match')}
           {link('work', 'Work')}
           {link('experience', 'Experience')}
           {link('contact', 'Contact')}

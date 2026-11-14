@@ -4,6 +4,7 @@ import { useUi, Xr } from '../components/Ui';
 function Thumb({ p }: { p: Project }) {
   return (
     <div className={`thumb thumb-${p.thumb}`} style={{ background: p.color }} aria-hidden="true">
+      <span className="thumb-bar"><i /><i /><i /></span>
       {p.thumb === 'phone' && <span className="mini-phone"><i /><i /><i /><i /></span>}
       {p.thumb === 'board' && <span className="mini-board"><span><i /><i /></span><span><i /></span><span><i /><i /><i /></span></span>}
       {p.thumb === 'soon' && <span className="mini-soon">in progress</span>}
@@ -16,7 +17,8 @@ export function Work() {
   return (
     <Xr as="section" id="work" className="wrap" label="Work" file="sections/Work.tsx"
       note="Cards are generated from content/projects.ts. Adding a project = adding one object; its card and case-study page appear automatically.">
-      <h2>Work</h2>
+      <p className="eyebrow">Work</p>
+      <h2>Things I've built</h2>
       {!dataReady ? (
         <ul className="cards">
           {[0, 1, 2].map((i) => <li key={i} className="card skeleton"><span>Loading projects…</span></li>)}
