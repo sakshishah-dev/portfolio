@@ -10,6 +10,32 @@
   .switch[aria-checked="true"] { border-color: var(--xr); color: var(--xr-ink); }
   .switch[aria-checked="true"] .knob { background: var(--xr); }
   .switch[aria-checked="true"] .knob::after { left: 14px; }
+  .layer {
+    border-radius: 18px; border: 1.5px solid var(--ink); background: var(--surface);
+    transform: rotateX(60deg) rotateZ(-45deg) translateZ(calc(var(--i) * var(--gap)));
+    box-shadow: -10px 10px 0 -2px rgba(0, 0, 0, .08);
+  }
+  .layer-data { background: #16161A; border-color: #16161A; }
+  .layer-api { background: var(--accent); border-color: var(--accent); }
+  .layer-css { background: #F4B740; border-color: #C98C12; }
+  .layer-you { background: color-mix(in srgb, var(--surface) 55%, transparent); border-style: dashed; }
+  .art { display: grid; transform: rotate(45deg); }
+  .art-rows { gap: 10px; width: 60%; }
+  .art-rows i { display: block; height: 8px; border-radius: 4px; background: rgba(255, 255, 255, .35); }
+  .art-rows i:first-child { background: rgba(255, 255, 255, .8); }
+  .art-code { font: 600 2.6rem/1 var(--mono); color: #fff; }
+  .art-boxes { grid-template-columns: 1fr 1fr; gap: 8px; width: 56%; }
+  .art-boxes i { display: block; height: 30px; border-radius: 6px; border: 1.5px solid var(--ink); }
+  .art-boxes i:first-child { grid-column: 1 / -1; background: var(--accent-soft); }
+  .art-dots { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .art-dots i { display: block; width: 22px; height: 22px; border-radius: 50%; background: #16161A; }
+  .art-dots i:nth-child(2) { background: var(--accent); } .art-dots i:nth-child(3) { background: #fff; } .art-dots i:nth-child(4) { background: #0F766E; }
+  .art-cursor { font-size: 3rem; line-height: 1; color: var(--ink); }
+  .stack-legend li { padding-left: 14px; }
+  .stack-legend li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 2px; background: var(--line); }
+  .stack:has([data-l="data"]:hover) .layer-data, .stack:has([data-l="api"]:hover) .layer-api,
+  .stack:has([data-l="ui"]:hover) .layer-ui, .stack:has([data-l="css"]:hover) .layer-css,
+  .stack:has([data-l="you"]:hover) .layer-you { outline: 3px solid var(--xr); outline-offset: 4px; }
   .facts li { border-top: 2px solid var(--ink); padding-top: 12px; }
   .card > a, .card-body { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px 14px 18px; }
   .card.soon .card-body { background: transparent; border-style: dashed; }

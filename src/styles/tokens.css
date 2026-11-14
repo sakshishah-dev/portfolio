@@ -24,3 +24,6 @@ img { max-width: 100%; }
 main:focus { outline: none; }
 .skip { position: absolute; left: -999px; top: 8px; }
 .skip:focus { left: 8px; z-index: 50; background: var(--ink); color: var(--bg); padding: 8px 12px; border-radius: 8px; }
+
+/* Registered so the layer stack can animate its spacing smoothly. */
+@property --gap { syntax: '<length>'; inherits: true; initial-value: 44px; }

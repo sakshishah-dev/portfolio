@@ -11,9 +11,8 @@ export const profile = {
   repo: 'https://github.com/sakshishah-dev/portfolio',
   noticePeriod: '2 months',
   intro:
-    "Associate Software Engineer at Tatvasoft. I'm the only developer on a live finance product " +
-    'for a client in Australia: .NET, Angular and SQL Server, front end to back end, plus the client demos. ' +
-    "On the side I'm building Daily Assistant, a reminder app, and learning React.",
+    "Associate Software Engineer at Tatvasoft. I'm the only developer on a live finance product for a client " +
+    'in Australia: .NET, Angular and SQL Server, plus the client demos. Learning React on the side.',
   facts: [
     { big: '2 years', small: 'building with .NET + Angular' },
     { big: 'Solo dev', small: 'on a live client product' },
