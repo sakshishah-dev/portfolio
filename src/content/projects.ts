@@ -37,7 +37,7 @@ export const projects: Project[] = [
       ['Works on', 'Android, iPhone and desktop'],
       ['Languages', 'English · हिन्दी · ગુજરાતી'],
     ],
-    video: { src: 'media/daily-assistant-demo.mp4', poster: 'media/daily-assistant-poster.jpg', caption: 'Recorded from the demo: ticking a medicine, adding water, checking on Maa, progress and reminders.' },
+    video: { src: 'media/daily-assistant-demo.mp4', poster: 'media/daily-assistant-poster.jpg', caption: 'A 75-second tour of the demo: Today, family, adding a reminder, tasks, progress, the doctor report, settings, and switching to Hindi and Gujarati.' },
     links: [{ label: 'Try the live demo', href: 'https://daily-assistant-eta.vercel.app', note: 'Tap "Try the demo": no sign-up, sample data, nothing is saved or sent' }],
     sections: [
       {
