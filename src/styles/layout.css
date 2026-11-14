@@ -88,7 +88,7 @@
 
   /* case study */
   .cs { display: grid; gap: 18px; }
-  .cs-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 6px 0; }
+  .cs-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 6px 0; }
   .cs-facts dd { margin: 4px 0 0; }
   .cs-sec { display: grid; gap: 12px; margin-top: 20px; }
   .cs-sec h2 { margin: 0; }

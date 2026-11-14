@@ -25,8 +25,8 @@ export const projects: Project[] = [
     slug: 'daily-assistant',
     name: 'Daily Assistant',
     kind: 'Side project · live',
-    summary: 'A free web app for medicine and routine reminders. It reminds you on time, tracks what you took, warns before a medicine runs out, and lets family follow a parent\'s medicines.',
-    tags: ['React', 'TypeScript', 'PostgreSQL', 'PWA', 'Web Push'],
+    summary: 'A free web app for medicine and routine reminders, in English, Hindi and Gujarati. It reminds you on time, tracks what you took, warns before a medicine runs out, and lets family follow a parent\'s medicines.',
+    tags: ['React', 'TypeScript', 'PostgreSQL', 'PWA', 'Web Push', 'i18n'],
     thumb: 'phone',
     color: '#0F766E',
     facts: [
@@ -34,8 +34,9 @@ export const projects: Project[] = [
       ['Stack', 'React · TypeScript · Supabase'],
       ['Status', 'Live with invited testers'],
       ['Works on', 'Android, iPhone and desktop'],
+      ['Languages', 'English · हिन्दी · ગુજરાતી'],
     ],
-    links: [{ label: 'Open the app', href: 'https://daily-assistant-eta.vercel.app', note: 'sign-up is invite-only for now' }],
+    links: [{ label: 'Try the live demo', href: 'https://daily-assistant-eta.vercel.app', note: 'Tap "Try the demo": no sign-up, sample data, nothing is saved or sent' }],
     sections: [
       {
         kind: 'text',
@@ -53,7 +54,8 @@ export const projects: Project[] = [
           'Water reminders with a daily goal, plus a daily task checklist with a week view.',
           'Progress: streaks, a Sunday summary ("most often missed: Monday mornings"), fixing past days, and a report to show your doctor.',
           'Family: follow a parent\'s medicines, get a "not taken yet" alert, and manage their medicines if they allow it.',
-          'Installs from the browser on any phone or computer. Sign in with a 6-digit email code, no password.',
+          'Works in English, Hindi and Gujarati, including the reminder notifications and the doctor report.',
+          'Installs from the browser on any phone or computer. Sign in with a 6-digit email code, no password, or try the demo without signing up.',
         ],
       },
       {
@@ -63,6 +65,7 @@ export const projects: Project[] = [
           { title: 'Reminders that go out exactly once', text: 'A scheduler runs every minute. A unique key in the database works as a lock, so a reminder is never sent twice, and each run also checks the last 5 minutes so a late run still delivers.' },
           { title: 'Private, even with family', text: "Row-level security in the database: people only see their own data. A family member sees only medicines, only after accepting an invite, and can edit only with the owner's permission." },
           { title: 'One app for every device', text: 'Built as a PWA, so the same app installs on Android, iPhone and desktop. Each platform has its own notification rules, so a short setup guide walks people through turning them on.' },
+          { title: 'Three languages, one codebase', text: 'Every screen, notification and the doctor report work in English, Hindi and Gujarati. The server sends each reminder in the person\'s own language; medicine names stay exactly as typed.' },
           { title: 'Shaped by tester feedback', text: 'Friends and family test every release. Their feedback led to alarm-style "remind me again", a simpler refill picker and in-app feedback that reaches me by email.' },
         ],
       },
