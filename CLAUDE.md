@@ -7,6 +7,8 @@ Live: https://sakshishah-dev.github.io/portfolio/ (GitHub Pages, deployed by .gi
 - **₹0 forever**: static site only. No paid APIs, servers, databases, form services or trackers.
 - **Client project is under NDA**: never add client name, code, screenshots or internal details. Industry + country only.
 - Keep it simple for recruiters; depth is opt-in (X-ray, replay).
+- **Branch names**: `main` is the live branch. Work goes on `features/<feature-name>` (e.g. `features/time-travel`).
+  Never create `claude/...` branches. Merge to `main` only with Sakshi's OK.
 - How to work with Sakshi: short overview of why + all steps, then only Step 1 in detail; wait for her result.
 
 ## How it works
