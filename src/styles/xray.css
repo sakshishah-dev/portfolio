@@ -1,0 +1,16 @@
+/* X-ray mode: one class on the page draws every component's outline and label. */
+.xray-on {
+  background-image: linear-gradient(var(--xr-soft) 1px, transparent 1px), linear-gradient(90deg, var(--xr-soft) 1px, transparent 1px);
+  background-size: 16px 16px;
+  .xr { position: relative; outline: 1.5px dashed var(--xr); outline-offset: 6px; border-radius: 6px; cursor: zoom-in; }
+  .xr:hover, .xr:focus-visible { outline-style: solid; outline-width: 2px; background-color: var(--xr-soft); }
+  .xr::before {
+    content: attr(data-xr-label) "  { } view code";
+    position: absolute; top: 10px; left: 10px;
+    font: 500 11px/1 var(--mono); background: var(--xr); color: var(--bg);
+    padding: 4px 7px; border-radius: 5px; white-space: nowrap; z-index: 5; pointer-events: none;
+  }
+  .site-head.xr { outline-offset: -3px; }
+  .site-head.xr::before { top: calc(100% + 6px); left: auto; right: max(20px, env(safe-area-inset-right)); }
+  [data-xr-ignore] { cursor: auto; }
+}
