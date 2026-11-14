@@ -16,8 +16,9 @@ export function Contact() {
   return (
     <Xr as="section" id="contact" className="wrap contact" label="Contact" file="sections/Contact.tsx"
       note="No contact form and no third-party service: a copy-email button and plain links. Nothing to pay for, nothing that can break.">
+      <p className="eyebrow">Contact</p>
       <h2>Let's talk</h2>
-      <p className="lede">Open to full-stack and .NET roles. Based in {profile.city}; notice period {profile.noticePeriod}.</p>
+      <p className="lede">Open to full-stack and front-end web roles. Based in {profile.city}, notice period {profile.noticePeriod}. I reply within a day.</p>
       <div className="contact-rows" data-xr-ignore>
         <div className="row">
           <span>{profile.email}</span>

@@ -11,7 +11,8 @@ export function Skills() {
   return (
     <Xr as="section" id="skills" className="wrap" label="Skills" file="sections/Skills.tsx"
       note="Honest groups instead of star ratings or percentage bars: what I use daily, what I am learning, and how I work with clients.">
-      <h2>Skills</h2>
+      <p className="eyebrow">Skills</p>
+      <h2>What I work with</h2>
       <div className="skills">
         {groups.map(([title, items]) => (
           <div key={title}>

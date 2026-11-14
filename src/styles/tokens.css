@@ -3,6 +3,8 @@
   --bg: #F6F5F1; --surface: #FFFFFF; --ink: #16161A; --muted: #5E5D66; --line: #E1DED6;
   --accent: #2B50E8; --accent-soft: #E7ECFD;
   --xr: #0B8F86; --xr-ink: #06615B; --xr-soft: rgba(11, 143, 134, .07);
+  --good: #1D8A4E; --good-soft: #E3F4EA; --warn: #A86500; --warn-soft: #FBF0DC;
+  --band: #16161A; --band-ink: #F2F1EC; --band-muted: #B4B3BB; --band-accent: #9CB0FF;
   --code-bg: #121518; --code-ink: #D5DDE2;
   --display: "Archivo", "Segoe UI", system-ui, sans-serif;
   --body: "Inter Tight", "Segoe UI", system-ui, sans-serif;
@@ -14,6 +16,8 @@
     --bg: #111113; --surface: #1A1A1E; --ink: #ECEBE6; --muted: #A3A2AB; --line: #2D2D33;
     --accent: #8CA3FF; --accent-soft: #212947;
     --xr: #38D5C8; --xr-ink: #7BE8DE; --xr-soft: rgba(56, 213, 200, .06);
+    --good: #4CCB85; --good-soft: #16301F; --warn: #F2B45A; --warn-soft: #33270F;
+    --band: #1E2340; --band-ink: #ECEBE6; --band-muted: #A9AEC9; --band-accent: #9CB0FF;
     color-scheme: dark;
   }
 }
@@ -24,3 +28,4 @@ img { max-width: 100%; }
 main:focus { outline: none; }
 .skip { position: absolute; left: -999px; top: 8px; }
 .skip:focus { left: 8px; z-index: 50; background: var(--ink); color: var(--bg); padding: 8px 12px; border-radius: 8px; }
+

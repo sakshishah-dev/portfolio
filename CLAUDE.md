@@ -11,8 +11,12 @@ Live: https://sakshishah-dev.github.io/portfolio/ (GitHub Pages, deployed by .gi
   Never create `claude/...` branches. Merge to `main` only with Sakshi's OK.
 - How to work with Sakshi: short overview of why + all steps, then only Step 1 in detail; wait for her result.
 
+## Page (recruiter-first)
+Hero (greeting + headline + IdCard on a lanyard) → JobMatch (dark band, `content/match.ts`) → Work → HowIWork →
+Experience → Skills → QuickAnswers (screening questions) → Contact. Identity = web developer; SQL is NOT highlighted.
+
 ## How it works
-- Content: `src/content/{profile,experience,projects}.ts` — edit these to change text; one object per project.
+- Content: `src/content/{profile,experience,projects,match}.ts` — edit these to change text; one object per project.
 - Hash routing (`#/work/<slug>`) because GitHub Pages is static. Vite `base: '/portfolio/'`.
 - **Style layers** (for the build replay): `styles/layout.css` (.st-layout), `look.css` (.st-look), `components.css` (.st-comp),
   `motion.css` (.st-motion). Every rule must sit under its layer class. `tokens.css` + `chrome.css` + `xray.css` are always on.

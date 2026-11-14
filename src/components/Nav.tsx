@@ -12,13 +12,14 @@ export function Nav({ onToggleXray, replaying }: { onToggleXray: () => void; rep
       <div className="wrap site-nav">
         <a className="logo" href="#/" onClick={(e) => { e.preventDefault(); goTo('top'); }}>{profile.name}</a>
         <ul className="nav-links">
+          {link('match', 'Job match')}
           {link('work', 'Work')}
           {link('experience', 'Experience')}
           {link('contact', 'Contact')}
         </ul>
         <div className="tools" data-xr-ignore>
           <button className="tool" onClick={startReplay} disabled={replaying}>
-            <span aria-hidden="true">▶</span> Watch it get built
+            <span aria-hidden="true">▶</span> <span className="long">Watch it get built</span><span className="short">Build</span>
           </button>
           <button className="tool switch" role="switch" aria-checked={xray} onClick={onToggleXray} disabled={replaying}>
             <span className="knob" aria-hidden="true" /> X-ray

@@ -6,7 +6,8 @@ export function Experience() {
   return (
     <Xr as="section" id="experience" className="wrap" label="Experience" file="sections/Experience.tsx"
       note="An ordered list (<ol>), because the order means something. The data lives in content/experience.ts.">
-      <h2>Experience</h2>
+      <p className="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
       {!dataReady ? (
         <p className="skeleton-line">Loading experience…</p>
       ) : (
