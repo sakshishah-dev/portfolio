@@ -7,6 +7,8 @@
   .row:hover, .tool:not(:disabled):hover { border-color: var(--ink); }
   .chip:hover { border-color: var(--band-ink); }
   .nav-links a:hover, .back:hover { color: var(--ink); }
+  .foot-col a, .foot-col .linkish, .to-top { transition: color .15s; }
+  .foot-col a:hover, .foot-col .linkish:hover, .to-top:hover { color: var(--accent); }
   .switch .knob, .switch .knob::after { transition: all .2s ease; }
   .skeleton { animation: shimmer 1.2s linear infinite; }
   .hero-text > * { animation: rise .6s ease both; }
@@ -23,8 +25,7 @@
   .steps li:hover { transform: translateY(-3px); }
   .skills li, .tags li { transition: background-color .15s, border-color .15s; }
   .skills li:hover { border-color: var(--accent); }
-  .qa { transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease; }
-  .qa:hover { transform: translateX(4px); }
+  .qa { transition: border-color .25s ease, box-shadow .25s ease; }
   .qa[open] p { animation: answer .4s ease both; }
   .qa summary::after { transition: transform .2s ease; }
   .qa[open] summary::after { transform: rotate(180deg); }

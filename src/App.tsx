@@ -5,8 +5,8 @@ import { CodePanel } from './components/CodePanel';
 import { ReplayCaption, useReplay, LAST } from './components/BuildReplay';
 import { Home } from './pages/Home';
 import { Project } from './pages/Project';
-import { profile } from './content/profile';
 import { CardDock, CardModal } from './components/CardDock';
+import { Footer } from './components/Footer';
 
 // Tiny hash router: GitHub Pages serves static files, so routes live after the #.
 function useRoute() {
@@ -69,10 +69,7 @@ export default function App() {
         <main id="main" tabIndex={-1}>
           {route.page === 'project' ? <Project slug={route.slug} /> : <Home />}
         </main>
-        <footer className="wrap site-foot">
-          <span>© {new Date().getFullYear()} {profile.name}</span>
-          <span>React + TypeScript · hosted free on GitHub Pages · <a href={profile.repo} target="_blank" rel="noreferrer">source code</a></span>
-        </footer>
+        <Footer />
         {xray && <div className="xray-badge" role="status">X-ray on · click any outlined part to see its code</div>}
         <CardDock show={!heroCardVisible && !xray && replay.stage === null && !cardOpen} onOpen={() => setCardOpen(true)} />
         <CardModal open={cardOpen} onClose={() => setCardOpen(false)} />

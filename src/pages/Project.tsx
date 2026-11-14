@@ -45,6 +45,14 @@ export function Project({ slug }: { slug: string }) {
         </div>
       )}
       {p.note && <p className="nda-note">{p.note}</p>}
+      {p.video && (
+        <figure className="cs-video">
+          <video src={import.meta.env.BASE_URL + p.video.src} poster={import.meta.env.BASE_URL + p.video.poster}
+            muted loop playsInline controls preload="metadata"
+            autoPlay={!window.matchMedia('(prefers-reduced-motion: reduce)').matches} aria-label={p.video.caption} />
+          <figcaption>{p.video.caption}</figcaption>
+        </figure>
+      )}
       {p.sections?.map((s) => <Block key={s.heading} s={s} />)}
     </Xr>
   );
