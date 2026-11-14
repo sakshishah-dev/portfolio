@@ -2,7 +2,7 @@
 export const profile = {
   name: 'Sakshi Shah',
   greeting: "Hi, I'm Sakshi.",
-  headline: 'I build web apps people enjoy using.',
+  headline: 'I build web apps that are simple to use.',
   role: 'Full-stack Web Developer',
   title: 'Associate Software Engineer',
   company: 'Tatvasoft',
@@ -14,8 +14,8 @@ export const profile = {
   noticePeriod: '2 months',
   status: 'Open to new roles',
   intro:
-    "Associate Software Engineer at Tatvasoft. For the last 1.5 years I've been the only developer on a live finance " +
-    'web app for a client in Australia: Angular screens, .NET APIs, releases and client demos. Learning React on the side.',
+    "I'm an Associate Software Engineer at Tatvasoft. I work on a live finance web app for a client in Australia, " +
+    'building both the Angular front end and the .NET back end, and showing new features to the client. Learning React on the side.',
   card: {
     facts: [
       ['Experience', '2 years'],

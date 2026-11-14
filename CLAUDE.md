@@ -13,7 +13,8 @@ Live: https://sakshishah-dev.github.io/portfolio/ (GitHub Pages, deployed by .gi
 
 ## Page (recruiter-first)
 Hero (greeting + headline + IdCard on a lanyard) → JobMatch (dark band, `content/match.ts`) → Work → HowIWork →
-Experience → Skills → QuickAnswers (screening questions) → Contact. Identity = web developer; SQL is NOT highlighted.
+Experience → Skills → QuickAnswers (screening questions) → Contact. When the hero card is out of view (or on project
+pages) `CardDock` shows a corner badge; tapping it opens `CardModal` (card drops in on its lanyard). Theme switch: ThemeToggle. Identity = web developer; SQL is NOT highlighted.
 
 ## How it works
 - Content: `src/content/{profile,experience,projects,match}.ts` — edit these to change text; one object per project.
