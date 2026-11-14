@@ -1,8 +1,8 @@
 // Everything about me in one place. Edit here; the whole site updates.
 export const profile = {
   name: 'Sakshi Shah',
-  greeting: "Hi, I'm Sakshi.",
-  headline: 'I build web apps that are simple to use.',
+  greeting: "Hi, I'm Sakshi,",
+  headline: 'a full-stack developer.',
   role: 'Full-stack Web Developer',
   title: 'Associate Software Engineer',
   company: 'Tatvasoft',
@@ -14,8 +14,9 @@ export const profile = {
   noticePeriod: '2 months',
   status: 'Open to new roles',
   intro:
-    "I'm an Associate Software Engineer at Tatvasoft. I work on a live finance web app for a client in Australia, " +
-    'building both the Angular front end and the .NET back end, and showing new features to the client. Learning React on the side.',
+    'At work I build and look after a live finance web app for a client in Australia, front end to back end ' +
+    '(Angular + .NET). In my own time I build web apps for everyday problems, like Daily Assistant, a free ' +
+    'medicine and routine reminder app that real people use.',
   card: {
     facts: [
       ['Experience', '2 years'],

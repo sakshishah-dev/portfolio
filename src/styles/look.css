@@ -64,7 +64,14 @@
   .qa summary { font-family: var(--display); font-weight: 700; font-size: 1.08rem; cursor: pointer; }
   .qa p { color: var(--muted); }
 
-  .site-foot { color: var(--muted); font-size: .86rem; }
+  .site-foot { color: var(--muted); font-size: .92rem; }
+  .foot-name { font-family: var(--display); font-weight: 800; font-size: 1.6rem; letter-spacing: -.02em; color: var(--ink); }
+  .foot-role { color: var(--ink); }
+  .foot-status { color: var(--good); font-weight: 600; font-size: .88rem; }
+  .foot-h { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .foot-col a, .foot-col .linkish { color: var(--ink); text-decoration: none; }
+  .foot-bottom { font-size: .82rem; }
+  .foot-bottom a { color: inherit; }
   .back { font-size: .92rem; color: var(--muted); text-decoration: none; }
   .cs-facts dt { font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
   .cs-facts dd { font-weight: 600; }

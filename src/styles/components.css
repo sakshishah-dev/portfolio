@@ -87,7 +87,9 @@
   /* contact */
   .row { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; text-decoration: none; color: inherit; }
   .mini-btn { border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 8px; padding: 6px 10px; font: 600 .8rem var(--body); cursor: pointer; flex: none; }
-  .site-foot { border-top: 1px solid var(--line); }
+  .site-foot { border-top: 1px solid var(--line); background: var(--surface); }
+  .foot-bottom { border-top: 1px solid var(--line); }
+  .foot-status::before { content: "● "; }
 
   /* case study */
   .cs-facts > div { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; background: var(--surface); }
