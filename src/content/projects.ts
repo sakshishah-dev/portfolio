@@ -26,7 +26,7 @@ export const projects: Project[] = [
     slug: 'daily-assistant',
     name: 'Daily Assistant',
     kind: 'Side project · live',
-    summary: 'A free web app for medicine and routine reminders, in English, Hindi and Gujarati. It reminds you on time, tracks what you took, warns before a medicine runs out, and lets family follow a parent\'s medicines.',
+    summary: 'A free web app for your daily routine: medicines, water, habits and tasks, in English, Hindi and Gujarati. It reminds you on time, shows what is done and what was missed, and lets family keep an eye on a parent\'s medicines.',
     tags: ['React', 'TypeScript', 'PostgreSQL', 'PWA', 'Web Push', 'i18n'],
     thumb: 'phone',
     color: '#0F766E',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       {
         kind: 'text',
         heading: 'The problem',
-        text: 'Remembering medicines is hard when the day gets busy, and harder for older parents. Most reminder apps are paid, full of ads or confusing. I wanted one simple, free app for medicines, water, habits and daily tasks that a family could use together.',
+        text: 'Days get busy and the small things slip: a medicine, a glass of water, a walk, a task you meant to finish. Most reminder apps only handle one of these, cost money or are full of ads. I wanted one simple, free app for the whole daily routine that a family could use together.',
       },
       {
         kind: 'list',

@@ -16,7 +16,7 @@ export const profile = {
   intro:
     'At work I build and look after a live finance web app for a client in Australia, front end to back end ' +
     '(Angular + .NET). In my own time I build web apps for everyday problems, like Daily Assistant, a free ' +
-    'medicine and routine reminder app that real people use.',
+    'app for daily reminders (medicines, water, habits and tasks) that real people use.',
   card: {
     facts: [
       ['Experience', '2 years'],
