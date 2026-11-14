@@ -24,6 +24,9 @@
   .id-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .id-fact { display: grid; gap: 2px; }
   .id-back { display: none; }
+  .id-foot { display: flex; align-items: center; gap: 12px; }
+  .id-scan { display: grid; gap: 2px; }
+  .qr { display: block; flex: none; }
   .id-why { display: grid; gap: 10px; }
   .id-why span { display: block; padding-left: 22px; position: relative; }
   .id-name, .id-role, .id-mail, .id-flip, .id-avatar { display: block; }

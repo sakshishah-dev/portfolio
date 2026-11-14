@@ -26,6 +26,9 @@
   .id-why span { font-size: .95rem; }
   .id-mail { font-family: var(--mono); font-size: .78rem; color: var(--accent); overflow-wrap: anywhere; }
   .id-flip { font-size: .76rem; color: var(--muted); text-align: center; }
+  .id-scan b { font-family: var(--display); font-size: .95rem; color: var(--ink); }
+  .id-scan { font-size: .8rem; line-height: 1.35; color: var(--muted); }
+  .id-avatar { letter-spacing: .02em; }
 
   /* job match */
   .field-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }

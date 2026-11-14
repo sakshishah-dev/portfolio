@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { profile } from '../content/profile';
 import { Xr } from './Ui';
+import { QrCode } from './QrCode';
 
 // An employee-style ID card hanging from a lanyard. Tap to flip for "Why hire me".
 export function IdCard() {
@@ -23,7 +24,11 @@ export function IdCard() {
                 <span key={k} className="id-fact"><small>{k}</small><b>{v}</b></span>
               ))}
             </span>
-            <span className="id-flip">Tap to flip ↻</span>
+            <span className="id-foot">
+              <QrCode text={profile.linkedin} label="QR code that opens Sakshi's LinkedIn profile" />
+              <span className="id-scan"><b>Scan me</b>Opens my LinkedIn on your phone</span>
+            </span>
+            <span className="id-flip">Tap the card to flip ↻</span>
           </span>
           <span className="id-face id-back">
             <span className="id-clip" aria-hidden="true" />

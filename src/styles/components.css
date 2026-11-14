@@ -25,7 +25,8 @@
   .id-clip::after { content: ""; position: absolute; left: 50%; top: 7px; width: 22px; height: 5px; margin-left: -11px; border-radius: 3px; background: var(--line); }
   .id-status { display: inline-flex; align-items: center; gap: 6px; background: var(--good-soft); padding: 4px 9px; border-radius: 999px; }
   .id-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--good); }
-  .id-avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(from 210deg, var(--accent), #0F766E, #F4B740, var(--accent)); border: 3px solid var(--surface); box-shadow: 0 0 0 1.5px var(--edge); }
+  .id-avatar { width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; background: #2B50E8; color: #FFFFFF; }
+  .qr { border-radius: 8px; border: 1px solid var(--line); }
   .id-fact { border: 1px solid var(--line); border-radius: 10px; padding: 7px 9px; background: var(--bg); }
   .id-why span::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--good); font-weight: 800; }
   .id-flip { border-top: 1px dashed var(--line); padding-top: 10px; }
