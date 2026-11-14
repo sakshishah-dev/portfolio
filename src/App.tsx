@@ -6,6 +6,7 @@ import { ReplayCaption, useReplay, LAST } from './components/BuildReplay';
 import { Home } from './pages/Home';
 import { Project } from './pages/Project';
 import { profile } from './content/profile';
+import { CardDock, CardModal } from './components/CardDock';
 
 // Tiny hash router: GitHub Pages serves static files, so routes live after the #.
 function useRoute() {
@@ -24,6 +25,18 @@ export default function App() {
   const replay = useReplay();
   const [xray, setXray] = useState(false);
   const [code, setCode] = useState<XrTarget | null>(null);
+  const [heroCardVisible, setHeroCardVisible] = useState(true);
+  const [cardOpen, setCardOpen] = useState(false);
+
+  // Watch the big hero ID card: when it scrolls out of view, the small corner badge appears.
+  useEffect(() => {
+    if (route.page !== 'home') { setHeroCardVisible(false); return; }
+    const el = document.querySelector('.id-wrap');
+    if (!el || !('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(([e]) => setHeroCardVisible(e.isIntersecting), { threshold: 0.15 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [route.page]);
 
   useEffect(() => { window.scrollTo({ top: 0 }); }, [route.page, route.slug]);
 
@@ -61,6 +74,8 @@ export default function App() {
           <span>React + TypeScript · hosted free on GitHub Pages · <a href={profile.repo} target="_blank" rel="noreferrer">source code</a></span>
         </footer>
         {xray && <div className="xray-badge" role="status">X-ray on · click any outlined part to see its code</div>}
+        <CardDock show={!heroCardVisible && !xray && replay.stage === null && !cardOpen} onOpen={() => setCardOpen(true)} />
+        <CardModal open={cardOpen} onClose={() => setCardOpen(false)} />
         <ReplayCaption {...replay} />
         <CodePanel target={code} onClose={() => setCode(null)} />
       </div>
